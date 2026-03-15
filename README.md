@@ -88,7 +88,7 @@ Eight BME688 sensors on a single PCB. Each operates on an individual temperature
 
 Three neural networks operate in parallel: a 1D-CNN classifier, an autoencoder for anomaly detection, and an LSTM for temporal dynamics. All models run on a local processor — no cloud computing required.
 
-Preliminary validation: classification accuracy above 94% across 127 compounds, at humidity levels of 20–80% RH and ambient temperatures of 5–35°C.
+Preliminary validation on a dataset of 23 individual compounds and 34 binary mixtures (57 classes total): classification accuracy of 91.3% at humidity levels of 20–80% RH and ambient temperatures of 5–35°C. Performance drops to 84% when ternary mixtures are included — an expected result given the exponential growth of the mixture space.
 
 ---
 
@@ -96,7 +96,7 @@ Preliminary validation: classification accuracy above 94% across 127 compounds, 
 
 Sensor drift remains the primary challenge. MOX elements age over time — baseline resistance shifts due to degradation of the sensing layer. Without regular recalibration, classification accuracy degrades. A possible path forward is self-supervised learning: training the model to be invariant to slow baseline changes while remaining sensitive to rapid changes in gas composition.
 
-Scaling the training dataset is the second open problem. 127 compounds represent a small fraction of the space of possible gases and mixtures. Synthetic data augmentation — adding noise, varying humidity, simulating drift — can expand the training set, but validation against real physical samples remains necessary.
+Scaling the training dataset is the second open problem. 57 classes is a reasonable starting point, but real-world applications demand hundreds. Each new compound requires controlled laboratory samples and multiple measurement sessions under varying conditions. Synthetic data augmentation — adding noise, varying humidity, simulating drift — can expand the training set, but validation against real physical samples remains necessary.
 
 ---
 
