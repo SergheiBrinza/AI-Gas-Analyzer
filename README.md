@@ -56,7 +56,7 @@ An array of *n* sensors, each with a unique temperature profile:
 
 $$\mathbf{X} \in \mathbb{R}^{4nk}$$
 
-For *n* = 10 and *k* = 10, this yields a 400-dimensional feature space. Classical methods — PCA followed by LDA (Gardner and Bartlett, 1994) — work for simple cases. But the *R(T)* dependence is exponential, and class boundaries in feature space are nonlinear.
+For *n* = 8 and *k* = 10, this yields a 320-dimensional feature space. Classical methods — PCA followed by LDA (Gardner and Bartlett, 1994) — work for simple cases. But the *R(T)* dependence is exponential, and class boundaries in feature space are nonlinear.
 
 A one-dimensional convolutional neural network (LeCun et al., 1998) extracts local patterns from the spectrum:
 
@@ -76,13 +76,13 @@ LSTM (Hochreiter and Schmidhuber, 1997) analyzes the dynamics of sequential scan
 
 ## Experimental Prototype
 
-Ten BME688 sensors on a single PCB. Each operates on an individual temperature profile of ten steps. Scan cycle duration: 3–5 seconds. 400 data points per cycle.
+Eight BME688 sensors on a single PCB. Each operates on an individual temperature profile of ten steps. Scan cycle duration: 3–5 seconds. Eight sensors, ten steps, four parameters per step — 320 data points per cycle.
 
 <div align="center">
 
 <img src="images/bme688-array-board.png" alt="BME688 Development Kit — array of 8 sensors on a single board" width="480">
 
-*Bosch BME688 Development Kit — an array of 8 sensors on a single board. The experimental prototype uses a similar layout with 10 sensors and active air pumping.*
+*Bosch BME688 Development Kit — an array of 8 sensors on a single board with active air pumping.*
 
 </div>
 
