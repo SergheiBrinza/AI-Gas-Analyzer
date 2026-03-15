@@ -1,4 +1,4 @@
-# Aura 7: Neural Network Classification of Gas Mixtures Using Metal-Oxide Sensor Arrays
+# Neural Network Classification of Gas Mixtures Using Metal-Oxide Sensor Arrays
 
 In 1952, Martin and Synge received the Nobel Prize in Chemistry for partition chromatography. In the seven decades since, the fundamental principle of gas analysis has not changed: physically separate the mixture into components, then measure each one individually. What if separation is not necessary at all?
 
@@ -74,7 +74,7 @@ LSTM (Hochreiter and Schmidhuber, 1997) analyzes the dynamics of sequential scan
 
 ---
 
-## The Aura 7 Prototype
+## Experimental Prototype
 
 Ten BME688 sensors on a single PCB. Each operates on an individual temperature profile of ten steps. Scan cycle duration: 3–5 seconds. 400 data points per cycle.
 
@@ -82,7 +82,7 @@ Ten BME688 sensors on a single PCB. Each operates on an individual temperature p
 
 <img src="images/bme688-array-board.png" alt="BME688 Development Kit — array of 8 sensors on a single board" width="480">
 
-*Bosch BME688 Development Kit — an array of 8 sensors on a single board. The Aura 7 prototype uses a similar layout with 10 sensors and active air pumping.*
+*Bosch BME688 Development Kit — an array of 8 sensors on a single board. The experimental prototype uses a similar layout with 10 sensors and active air pumping.*
 
 </div>
 
